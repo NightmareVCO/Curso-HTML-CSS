@@ -1,0 +1,19 @@
+/* CSS general de elementos*/
+body{
+   background-color: #222;
+   color: white;
+}
+/* Ante la repetición de selecciones, se va a eligir el ultimo que fue creado.*/
+h3{
+   color:rgb(67, 117, 255);
+}
+/* Mientas mas especifica el la regla, mas prioridad tiene a ser aplicada. */
+/* CSS ids y clases*/
+.hashtag{
+   color:rgb(67, 117, 255);
+}
+
+#experiencia{
+   background-color:white;
+   color: #222;
+}
