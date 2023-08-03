@@ -1,8 +1,15 @@
 /* CSS general de elementos*/
+/* Selector global, cualquier cosa mas especifica sera prioritaria */
+* {
+   margin: 0px;
+   padding: 0px;
+}
+
 body{
    background-color: #222;
    color: white;
    font: 300 14px 'Poppins', sans-serif;
+
    /* font-family: 'Poppins', sans-serif;
    font-size: 14px;
    font-weight: 200; */
@@ -24,13 +31,31 @@ cite {
    font-weight: 300;
 }
 /* Mientas mas especifica el la regla, mas prioridad tiene a ser aplicada. */
+
 /* CSS ids y clases*/
+/* . punto para las clases */
 .hashtag{
    color:rgb(67, 117, 255);
 }
 
+.inicio{
+padding: 10px 100px 10px 100px;
+/* Arriba, Derecha, Abajo, Izquierda */
 
+
+   /* padding-left: 100px;
+   padding-right: 100px;
+   padding-top: 10px;
+   padding-bottom: 10px; */
+}
+
+/* # para los ids */
 #experiencia{
    background-color:white;
    color: #222;
 }
+
+#portfolio{
+   border-top: 1px solid rgb(67, 117, 255);
+}
+
