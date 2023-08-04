@@ -31,6 +31,40 @@ p {
 cite {
    font-weight: 300;
 }
+
+/* Elementos dentro de las listas */
+i {
+   font-size: 35px;
+}
+/* Cuando te colocas encima de un elemento de la lista */
+i:hover
+{
+   color: rgb(67, 117, 255);
+}
+
+/* Para distintos navegadores */
+/* Mantener el color de los links blancos */
+a:any-link {
+   color: white;
+}
+a:-moz-any-link {
+   color: white;
+}
+a:-webkit-any-link {
+   color: white;
+}
+
+/* Apartado lista como tal, el conjunto */
+li {
+   float: left;
+   margin-right: 10px;
+   margin-top: 100px;
+   /* width: 30x; */
+}
+
+
+
+
 /* Mientas mas especifica el la regla, mas prioridad tiene a ser aplicada. */
 
 /* CSS ids y clases*/
@@ -71,3 +105,7 @@ padding: 10px 100px 10px 100px;
    border-top: 1px solid rgb(67, 117, 255);
 }
 
+#redes-sociales{
+   list-style: none;
+   margin-top: 30px;
+}
