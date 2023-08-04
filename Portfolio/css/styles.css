@@ -24,6 +24,22 @@ h3{
    font-size: 18px;
    font-weight: 300;
 }
+
+nav {
+   background-color: #222;
+   border-bottom: 1px solid rgb(67, 117, 255);
+   padding-top: 10px;
+   text-align: center;
+}
+/* Selector de descencia */
+nav ul{
+   display: inline-block;
+}
+
+nav ul li{
+   margin: 15px;
+   font-size: 20px;
+}
 p {
    text-align: justify;
 }
@@ -54,6 +70,10 @@ a:-webkit-any-link {
    color: white;
 }
 
+ul{
+   list-style: none;
+}
+
 /* Apartado lista como tal, el conjunto */
 li {
    float: left;
@@ -65,8 +85,6 @@ li {
 section {
    padding: 10px 100px 10px 100px;
    /* Arriba, Derecha, Abajo, Izquierda */
-   
-   
       /* padding-left: 100px;
       padding-right: 100px;
       padding-top: 10px;
@@ -103,6 +121,5 @@ section {
 }
 
 #redes-sociales{
-   list-style: none;
    margin-top: 30px;
 }
