@@ -62,8 +62,16 @@ li {
    /* width: 30x; */
 }
 
-
-
+section {
+   padding: 10px 100px 10px 100px;
+   /* Arriba, Derecha, Abajo, Izquierda */
+   
+   
+      /* padding-left: 100px;
+      padding-right: 100px;
+      padding-top: 10px;
+      padding-bottom: 10px; */
+}
 
 /* Mientas mas especifica el la regla, mas prioridad tiene a ser aplicada. */
 
@@ -71,17 +79,6 @@ li {
 /* . punto para las clases */
 .hashtag{
    color:rgb(67, 117, 255);
-}
-
-.inicio{
-padding: 10px 100px 10px 100px;
-/* Arriba, Derecha, Abajo, Izquierda */
-
-
-   /* padding-left: 100px;
-   padding-right: 100px;
-   padding-top: 10px;
-   padding-bottom: 10px; */
 }
 
 
