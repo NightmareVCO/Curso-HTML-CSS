@@ -178,19 +178,9 @@ button {
    float: right
 }
 
-
-
 .card .sep {
    margin: 0 5px 5px 0;
    border: 1px solid rgb(67, 117, 255);
-}
-
-.grid-experiencia {
-   display: grid;
-   grid-template-columns: repeat(4, 350px);
-   grid-gap: 10px;
-   justify-content: space-between;
-   align-content: space-around;
 }
 
 .card-experiecia {
@@ -219,6 +209,19 @@ button {
    justify-content: space-between;
    align-content: space-around;
 
+}
+
+@media (min-width: 400px) {
+   .grid-experiencia {
+      display: flex;
+      flex-direction: row;
+
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 30px 30px;
+      margin-bottom: 15px;
+      margin-top: 15px;
+   }
 }
 
 /* # para los ids */
