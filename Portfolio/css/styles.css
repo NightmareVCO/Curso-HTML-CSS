@@ -100,6 +100,10 @@ section {
       padding-top: 10px;
       padding-bottom: 10px; */
 }
+button {
+   border-radius: 15px;
+   
+}
 
 /* Mientas mas especifica el la regla, mas prioridad tiene a ser aplicada. */
 
@@ -123,6 +127,11 @@ section {
 .card{
    width: 250px;
    background-color: #191919;
+   border-radius: 15px;
+}
+
+.card img{
+   border-radius: 15px 15px 0px 0px;
 }
 .card h4{
    margin:0 5px 5px 0;
@@ -134,6 +143,10 @@ section {
 .card .masinfo {
    margin: 15px 0px 15px 0 px;
    height: 26px;
+}
+.card button{
+   padding: 5px;
+   margin: 5px;
 }
 .card .mas-info button{
     background-color: rgb(67, 117, 255);
