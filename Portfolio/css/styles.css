@@ -289,3 +289,29 @@ button {
 #contacto h3 {
    color: #222;
 }
+
+.itemform {
+   display: grid;
+   grid-template-columns: 150px 350px;
+   justify-content: center;
+   margin-bottom: 10px;
+}
+
+.itemform label {
+   font-weight: 700;
+}
+
+.itemform input,
+.itemform textarea {
+   border-radius: 5px;
+   border: 1px solid white;
+}
+
+input[type="submit"] {
+   background-color: #222;
+   border: 1px solid #222;
+   color: white;
+   padding: 10px;
+   grid-column: 2/3;
+   justify-self: end;
+}
