@@ -46,6 +46,10 @@ button {
    border-radius: 15px;
 }
 
+label {
+   font: 300 14px 'Poppins', sans-serif;
+}
+
 /* Para distintos navegadores */
 /* Mantener el color de los links blancos */
 a:any-link {
@@ -144,13 +148,10 @@ nav ul li:hover {
    padding-top: 100px;
 }
 
-#redes_sociales {
-   margin-top: 30px;
-}
-
 #inicio_nombre {
    position: relative;
    width: -moz-fit-content;
+   /* Para que el fondo solo llegue hasta el texto mas largo */
    width: fit-content;
    top: 20px;
    padding: 10px;
@@ -160,6 +161,13 @@ nav ul li:hover {
 .hashtag {
    color: rgb(67, 117, 255);
 }
+
+#redes_sociales {
+   margin-top: 30px;
+}
+
+/* Responsive */
+@media (max-width: 600px) {}
 
 /* Fin Inicio */
 
@@ -336,8 +344,11 @@ input[type="submit"] {
 
 /* Fin Contacto */
 
+
 /* Responsive */
-@media (max-width: 1000px) {
+@media (max-width: 1024px) {
+
+   /* Experiencia, de grid a flex */
    .grid-experiencia {
       display: flex;
       flex-direction: column;
@@ -350,6 +361,22 @@ input[type="submit"] {
       margin-top: 15px;
    }
 
+   /* Navbar */
+   nav {
+      /* Para que se quede atado aunque se mueva el scroll*/
+      position: fixed;
+      size: 100px;
+      width: 100%;
+      /* Corregir la superposición */
+      z-index: 1;
+
+      background-color: #222;
+      border-bottom: 1px solid rgb(67, 117, 255);
+      padding-top: 10px;
+      text-align: center;
+   }
+
+   /* Sobre mi, de grid a flex */
    #sobre_mi {
       display: flex;
       flex-direction: column;
@@ -359,5 +386,26 @@ input[type="submit"] {
       gap: 30px 30px;
       margin-bottom: 15px;
       margin-top: 15px;
+   }
+
+   #redes_sociales {
+      position: relative;
+      width: fit-content;
+
+      transform: translateX(-50%);
+      left: 300px;
+      top: 290px;
+   }
+
+   #inicio_nombre {
+      position: relative;
+      top: 60px;
+      width: 100%;
+      padding: 10px;
+      background-color: rgba(2, 2, 2, 0.6);
+   }
+
+   #redes_sociales li {
+      float: none;
    }
 }
