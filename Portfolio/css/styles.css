@@ -1,18 +1,21 @@
 /* CSS general de elementos*/
+/* Ante la repetición de selecciones, se va a eligir el ultimo que fue creado.*/
+/* Mientas mas especifica el la regla, mas prioridad tiene a ser aplicada. */
+/* . punto para las clases */
+/* # para los ids */
+
 /* Selector global, cualquier cosa mas especifica sera prioritaria */
 * {
    margin: 0px;
    padding: 0px;
 }
 
+/* Generales */
 body {
    background-color: #222;
    color: white;
+   /* weight, size, family */
    font: 300 14px 'Poppins', sans-serif;
-
-   /* font-family: 'Poppins', sans-serif;
-   font-size: 14px;
-   font-weight: 200; */
 }
 
 h2 {
@@ -20,41 +23,11 @@ h2 {
    line-height: 36px;
 }
 
-/* Ante la repetición de selecciones, se va a eligir el ultimo que fue creado.*/
 h3 {
    color: rgb(67, 117, 255);
    font-size: 18px;
    font-weight: 300;
 }
-
-/* position fixed */
-nav {
-   position: fixed;
-   width: 100%;
-   /* Corregir la superposición */
-   z-index: 1;
-
-   background-color: #222;
-   border-bottom: 1px solid rgb(67, 117, 255);
-   padding-top: 10px;
-   text-align: center;
-}
-
-/* Selector de descendía */
-nav ul {
-   display: inline-block;
-}
-
-nav ul li {
-   margin: 15px;
-   font-size: 20px;
-}
-
-nav ul li:hover {
-   color: rgb(67, 117, 255);
-}
-
-
 
 p {
    text-align: justify;
@@ -64,14 +37,13 @@ cite {
    font-weight: 300;
 }
 
-/* Elementos dentro de las listas */
-i {
-   font-size: 35px;
+section {
+   /* Arriba, Derecha, Abajo, Izquierda */
+   padding: 10px 100px 10px 100px;
 }
 
-/* Cuando te colocas encima de un elemento de la lista */
-i:hover {
-   color: rgb(67, 117, 255);
+button {
+   border-radius: 15px;
 }
 
 /* Para distintos navegadores */
@@ -88,7 +60,22 @@ a:-webkit-any-link {
    color: white;
 }
 
+.mas_info button {
+   background-color: rgb(67, 117, 255);
+   font-weight: 600;
+   padding-left: 15px;
+   padding-right: 15px;
+   padding: 5px;
+   margin: 10px;
+   float: left;
+}
+
+/* Fin Generales */
+
+/* Lista  */
+
 ul {
+   /* Para quitar los puntos de la lista */
    list-style: none;
 }
 
@@ -100,35 +87,127 @@ li {
    /* width: 30x; */
 }
 
-section {
-   padding: 10px 100px 10px 100px;
-   /* Arriba, Derecha, Abajo, Izquierda */
-   /* padding-left: 100px;
-      padding-right: 100px;
-      padding-top: 10px;
-      padding-bottom: 10px; */
+/* Elementos dentro de las listas */
+i {
+   font-size: 35px;
 }
 
-button {
-   border-radius: 15px;
-
+/* Cuando te colocas encima de un elemento de la lista */
+i:hover {
+   color: rgb(67, 117, 255);
 }
 
-/* Mientas mas especifica el la regla, mas prioridad tiene a ser aplicada. */
+/* Fin Lista */
 
-/* CSS ids y clases*/
-/* . punto para las clases */
+/* Navbar */
+nav {
+   /* Para que se quede atado aunque se mueva el scroll*/
+   position: fixed;
+   width: 100%;
+   /* Corregir la superposición */
+   z-index: 1;
+
+   background-color: #222;
+   border-bottom: 1px solid rgb(67, 117, 255);
+   padding-top: 10px;
+   text-align: center;
+}
+
+nav ul {
+   display: inline-block;
+}
+
+nav ul li {
+   margin: 15px;
+   font-size: 20px;
+}
+
+nav ul li:hover {
+   color: rgb(67, 117, 255);
+}
+
+/* Fin Navbar */
+
+
+
+/* Ids y Clases*/
+
+/* Inicio */
+#inicio {
+   background-image: url(../images/fondo.png);
+   background-repeat: no-repeat;
+   background-size: cover;
+   /* Mas 10px de arriba y 10px de abajo, serian 300px de altura */
+   min-height: 280px;
+   min-width: 200px;
+   /* Para el nav var */
+   padding-top: 100px;
+}
+
+#redes_sociales {
+   margin-top: 30px;
+}
+
+#inicio_nombre {
+   position: relative;
+   width: -moz-fit-content;
+   width: fit-content;
+   top: 20px;
+   padding: 10px;
+   background-color: rgba(2, 2, 2, 0.6);
+}
+
 .hashtag {
    color: rgb(67, 117, 255);
 }
 
-.filaportfolio {
-   display: flex;
-   flex-direction: row;
+/* Fin Inicio */
 
+
+/* Sobre mi */
+#sobre_mi {
+   display: grid;
+   grid-template-columns: 250px 1fr;
+}
+
+#cuerpo_sobre_mi {
+   margin: 15px;
+}
+
+#cuerpo_sobre_mi h2 {
+   margin-bottom: 15px;
+}
+
+#cuerpo_sobre_mi .mas-info {
+   margin-top: 15px;
+}
+
+#sobre_mi .mas_info button {
+   /* Arriba, Derecha, Abajo, Izquierda */
+   padding: 5px 30px 5px 30px;
+
+}
+
+
+/* Fin Sobre mi */
+
+/* Portfolio */
+#portfolio {
+   border-top: 1px solid rgb(67, 117, 255);
+}
+
+.filaportfolio {
+   /* Tipo flex */
+   display: flex;
+   /* Dirección en la que se muestra */
+   flex-direction: row;
+   /* Permite que se dividan hacia abajo */
    flex-wrap: wrap;
-   justify-content: space-between;
+   /* Manera en la que distribuye el espacio entre los elementos en relación al flex  */
+   justify-content: center;
+   /* Distancia entre los elementos del flex, pero entre ellos mismos */
    gap: 30px 30px;
+
    margin-bottom: 15px;
    margin-top: 15px;
 }
@@ -143,8 +222,18 @@ button {
    border-radius: 15px 15px 0px 0px;
 }
 
+.card .sep {
+   margin: 0 5px 5px 0;
+   border: 1px solid rgb(67, 117, 255);
+}
+
 .card h4 {
    margin: 0 5px 5px 0;
+}
+
+.card .masinfo {
+   margin: 15px 0px 15px 0 px;
+   height: 26px;
 }
 
 .card h3,
@@ -154,33 +243,34 @@ button {
    padding: 0 15px;
 }
 
-.card .masinfo {
-   margin: 15px 0px 15px 0 px;
-   height: 26px;
-}
-
 .card button {
    padding: 5px;
    margin: 10px;
 }
 
-.mas-info button {
-   background-color: rgb(67, 117, 255);
-   font-weight: 600;
-   padding-left: 15px;
-   padding-right: 15px;
-   padding: 5px;
-   margin: 10px;
-   float: left;
-}
-
-.card .mas-info button {
-   float: right
-}
-
 .card .sep {
    margin: 0 5px 5px 0;
    border: 1px solid rgb(67, 117, 255);
+}
+
+.card .mas_info button {
+   float: right
+}
+
+/* Fin Portfolio */
+
+/* Experiencia */
+#experiencia {
+   background-color: white;
+   color: #222;
+}
+
+.grid-experiencia {
+   display: grid;
+   grid-template-columns: repeat(3, 350px);
+   grid-gap: 10px;
+   justify-content: space-between;
+   align-content: space-around;
 }
 
 .card-experiecia {
@@ -202,85 +292,10 @@ button {
    margin-bottom: 20px;
 }
 
-.grid-experiencia {
-   display: grid;
-   grid-template-columns: repeat(3, 500px);
-   grid-gap: 10px;
-   justify-content: space-between;
-   align-content: space-around;
 
-}
+/* Fin Experiencia */
 
-@media (min-width: 400px) {
-   .grid-experiencia {
-      display: flex;
-      flex-direction: row;
-
-      flex-wrap: wrap;
-      justify-content: space-between;
-      gap: 30px 30px;
-      margin-bottom: 15px;
-      margin-top: 15px;
-   }
-}
-
-/* # para los ids */
-#inicio {
-   background-image: url(../images/fondo.png);
-   background-repeat: no-repeat;
-   background-size: cover;
-   /* Mas 10px de arriba y 10px de abajo, serian 300px de altura */
-   min-height: 280px;
-
-   min-width: 200px;
-   /* Para el nav var */
-   padding-top: 100px;
-}
-
-#experiencia {
-   background-color: white;
-   color: #222;
-}
-
-#portfolio {
-   border-top: 1px solid rgb(67, 117, 255);
-}
-
-#redes-sociales {
-   margin-top: 30px;
-}
-
-#inicio_nombre {
-   position: relative;
-   width: -moz-fit-content;
-   width: fit-content;
-   top: 20px;
-   padding: 10px;
-   background-color: rgba(2, 2, 2, 0.6);
-}
-
-#sobre_mi {
-   display: grid;
-   grid-template-columns: 250px 1fr;
-}
-
-#cuerpo_sobre_mi {
-   margin: 15px;
-}
-
-#cuerpo_sobre_mi h2 {
-   margin-bottom: 15px;
-}
-
-#cuerpo_sobre_mi .mas-info {
-   margin-top: 15px;
-}
-
-#sobre_mi .mas-info button {
-   padding: 5px 30px 5px 30px;
-   /* Arriba, Derecha, Abajo, Izquierda */
-}
-
+/* Contacto */
 #contacto {
    background-color: rgb(67, 117, 255);
 }
@@ -317,4 +332,32 @@ input[type="submit"] {
    padding: 10px;
    grid-column: 2/3;
    justify-self: end;
+}
+
+/* Fin Contacto */
+
+/* Responsive */
+@media (max-width: 1000px) {
+   .grid-experiencia {
+      display: flex;
+      flex-direction: column;
+
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-content: stretch;
+      gap: 30px 30px;
+      margin-bottom: 15px;
+      margin-top: 15px;
+   }
+
+   #sobre_mi {
+      display: flex;
+      flex-direction: column;
+
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 30px 30px;
+      margin-bottom: 15px;
+      margin-top: 15px;
+   }
 }
