@@ -93,7 +93,7 @@ i {
 }
 
 /* Cuando te colocas encima de un elemento de la lista */
-i:hover {
+a:hover {
    color: rgb(67, 117, 255);
 }
 
