@@ -46,10 +46,6 @@ button {
    border-radius: 15px;
 }
 
-label {
-   font: 300 14px 'Poppins', sans-serif;
-}
-
 /* Para distintos navegadores */
 /* Mantener el color de los links blancos */
 a:any-link {
@@ -132,8 +128,6 @@ nav ul li:hover {
 
 /* Fin Navbar */
 
-
-
 /* Ids y Clases*/
 
 /* Inicio */
@@ -166,11 +160,7 @@ nav ul li:hover {
    margin-top: 30px;
 }
 
-/* Responsive */
-@media (max-width: 600px) {}
-
 /* Fin Inicio */
-
 
 /* Sobre mi */
 #sobre_mi {
@@ -352,14 +342,15 @@ input[type="submit"] {
    .grid-experiencia {
       display: flex;
       flex-direction: column;
-
       flex-wrap: wrap;
-      justify-content: space-between;
-      align-content: stretch;
+      justify-content: center;
+      align-content: center;
       gap: 30px 30px;
       margin-bottom: 15px;
       margin-top: 15px;
    }
+
+   /* Fin Experiencia */
 
    /* Navbar */
    nav {
@@ -376,27 +367,14 @@ input[type="submit"] {
       text-align: center;
    }
 
-   /* Sobre mi, de grid a flex */
-   #sobre_mi {
-      display: flex;
-      flex-direction: column;
-
-      flex-wrap: wrap;
-      justify-content: space-between;
-      gap: 30px 30px;
-      margin-bottom: 15px;
-      margin-top: 15px;
+   nav ul li {
+      margin: 15px;
+      font-size: 20px;
    }
 
-   #redes_sociales {
-      position: relative;
-      width: fit-content;
+   /* Fin Navbar */
 
-      transform: translateX(-50%);
-      left: 300px;
-      top: 290px;
-   }
-
+   /* Inicio */
    #inicio_nombre {
       position: relative;
       top: 60px;
@@ -405,7 +383,84 @@ input[type="submit"] {
       background-color: rgba(2, 2, 2, 0.6);
    }
 
-   #redes_sociales li {
-      float: none;
+   #redes_sociales {
+      margin-top: 60px;
+   }
+
+   /* Fin Inicio */
+
+   /* Sobre mi */
+   #imagen_sobre_mi {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+   }
+
+   #cuerpo_sobre_mi h2 {
+      text-align: center;
+   }
+
+   /* Sobre mi, de grid a flex */
+   #sobre_mi {
+      display: flex;
+      flex-direction: column;
+      width: -moz-fit-content;
+      width: fit-content;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 30px 30px;
+      margin-bottom: 15px;
+      margin-top: 15px;
+   }
+
+   /* Fin Sobre mi */
+
+   /* Portfolio */
+   .card {
+      width: 300px;
+      background-color: #191919;
+      border-radius: 15px;
+   }
+
+   .card img {
+      width: 300px;
+   }
+
+
+   @media (max-width: 414px) {
+
+      /* Navbar */
+      nav ul li a {
+         font-size: 14px;
+      }
+
+      /* Fin Navbar */
+
+      /* Contacto */
+      label {
+         position: relative;
+         left: 50%
+      }
+
+      input[type="text"] {
+         width: 280px;
+      }
+
+      input[type="email"] {
+         width: 280px;
+      }
+
+      .itemform input[type="submit"] {
+         position: relative;
+         right: 55%;
+      }
+
+      textarea {
+         width: 280px;
+      }
+
+      /* Fin Contacto */
+
+
    }
 }
