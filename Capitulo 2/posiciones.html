@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html lang="es">
-	<head>
-		<meta charset="UTF-8" />
-		<title>Posiciones relativas</title>
-		<style>
-			body {
-				background: #d9c6b0;
-			}
-			/*EJEMPLO 1 BLOQUE
+
+<head>
+   <meta charset="UTF-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <title>Posiciones relativas</title>
+   <style>
+      body {
+         background: #d9c6b0;
+      }
+
+      /*EJEMPLO 1 BLOQUE
         section {
         display: block;
         width: 400px;
@@ -15,25 +18,25 @@
         background:#733E20;
         }
         p {
-        width: 50%;   
-        height: 25%;  
-        margin: 5%;   
-        padding: 5%;  
+        width: 50%;
+        height: 25%;
+        margin: 5%;
+        padding: 5%;
         background: #BF895A;
         }
         */
-			/*EJEMPLO 2 INLINE
+      /*EJEMPLO 2 INLINE
         section {
             display: inline;
             background: #733E20;
         }
         p {
-            width: 50%;     
+            width: 50%;
             height: 200px;
             background: #BF895A;
         }
         */
-			/*EJEMPLO 3 ABSOLUTE
+      /*EJEMPLO 3 ABSOLUTE
         section {
             position: absolute;
             left: 30px;
@@ -48,30 +51,33 @@
             position: absolute;
             width: 50%;
             height: 25%;
-            margin: 5%; 
+            margin: 5%;
             padding: 5%;
             background: #BF895A;
         }*/
 
-			/*EJEMPLO 4 FIXED*/
-			section {
-				width: 400px;
-				height: 480px;
-				background: #733e20;
-			}
-			p {
-				position: fixed;
-				width: 50%;
-				height: 50%;
-				margin: 5%;
-				padding: 5%;
-				background: #bf895a;
-			}
-		</style>
-	</head>
-	<body>
-		<section>
-			<p>Aquí hay un párrafo</p>
-		</section>
-	</body>
+      /*EJEMPLO 4 FIXED*/
+      section {
+         width: 400px;
+         height: 480px;
+         background: #733e20;
+      }
+
+      p {
+         position: fixed;
+         width: 50%;
+         height: 50%;
+         margin: 5%;
+         padding: 5%;
+         background: #bf895a;
+      }
+   </style>
+</head>
+
+<body>
+   <section>
+      <p>Aquí hay un párrafo</p>
+   </section>
+</body>
+
 </html>
